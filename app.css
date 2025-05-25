@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --font-primary: "Ancizar Serif", serif;
+    --font-secondary: "Open Sans", sans-serif;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-overlay: rgb(24, 23, 23);
+    --color-primary: #6ee866;
+    --hero-height: 100%;
+    --hero-title-size: 100px;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--color-overlay);
+    color: #fff;
+}
+
+/* Ajustes generales */
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+h2{
+    font-size: 30px;
+}
+
+p{
+    font-size: 20px;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    height: 500px;
+}
+
+.hero{
+    background: url(../assets/img/hero.jpg) no-repeat center center;
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con 50% de opacidad */
+    z-index: 1; /* Asegura que el pseudo-elemento esté delante del fondo */
+}
+
+.hero > * {
+    position: relative; /* Asegura que el contenido esté delante de la superposición */
+    z-index: 2;
+}
+
+.hero-title{
+    font-size: 70px;
+    text-align: center;
+}
+
+/* Description - Section */
+.section-number{
+    font-size: 50px;
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.container-image{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container-image img{
+    width: 100%;
+    display: block;
+}
+
+.container-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ajusta la altura del difuminado */
+    background: linear-gradient(to top, var(--color-overlay), rgba(0, 0, 0, 0)); /* Degradado negro a transparente */
+    pointer-events: none; /* Asegura que no interfiera con la interacción del usuario */
+}
+
+.container-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.description-title{
+    margin-bottom: 20px;
+}
+
+/*Footer - section*/
+.footer{
+    margin-top: 40px;
+}
+
+.footer-text{
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+}
