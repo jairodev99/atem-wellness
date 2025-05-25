@@ -138,3 +138,11 @@ p{
     font-weight: 100;
     font-size: 15px;
 }
+
+.whatsapp-link{
+    margin: 20px 0;
+    text-decoration: none;
+    color: var(--color-primary);
+    display: block;
+    text-align: center;
+}
