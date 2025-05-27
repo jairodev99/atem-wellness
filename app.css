@@ -216,6 +216,28 @@ p{
     background-color: var(--color-secondary);
     padding: 10px 0;
     border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* Messages - section */
+.message{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.message-text span{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.message-slogan{
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.message-slogan span{
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 /*Footer - section*/
